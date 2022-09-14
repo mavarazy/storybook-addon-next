@@ -12,7 +12,7 @@ const nextImageLoaderStub: RawLoaderDefinition<LoaderOptions> = function (
   const { filename } = this.getOptions()
   const outputPath = interpolateName(
     this,
-    filename.replace('[ext]', '.[ext]'),
+    filename?.replace('[ext]', '.[ext]'),
     {
       context: this.rootContext,
       content
